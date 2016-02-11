@@ -18,21 +18,12 @@ module.exports = function(grunt) {
 					style: 'compressed'
 				},
 				files	: {
-					'style.css': 'components/sass/style.scss'
+					'css/style.css': 'components/sass/style.scss',
+					'includes/resources/bootstrap/css/bootstrap.min.css': 'includes/resources/bootstrap/css/bootstrap.scss'
 				}
 			}
 		}, //sass
 
-		// connect 	: {
-		// 	server	: {
-		// 		options: {
-		// 			hostname: 'localhost',
-		// 			port: 8888,
-		// 			// base: 'builds/development/',
-		// 			livereload: true
-		// 		}
-		// 	}
-		// }, //connect 
 
 		watch 		: {
 			options	: {
@@ -41,7 +32,7 @@ module.exports = function(grunt) {
 			scripts: {
 					files: ['**/*.php',
 					'components/scripts/**/*.js',
-					'components/sass/**/*.scss'],
+					'**/*.scss'],
 					tasks: ['concat', 'sass']
 			}
 		} //watch

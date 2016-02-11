@@ -1,0 +1,19 @@
+.post-info h1,
+.post-info .entry-meta {
+	display: inline;
+    vertical-align: top;
+}
+
+.post-info {
+	margin: 10px 0;
+	border-bottom: 2px solid #000;
+}
+
+h1.page-title a{
+	font-family: $font-bold-headline;
+}
+
+.entry-date {
+	font-family: $font-headline;
+	font-size: 18px;
+}

@@ -31,7 +31,7 @@ function _tk_custom_header_setup() {
 			'default-image'          => '',
 			'default-text-color'     => '000',
 			'width'                  => 1170,
-			'height'                 => 250,
+			'height'                 => 175,
 			'flex-height'            => true,
 			'wp-head-callback'       => '_tk_header_style',
 			'admin-head-callback'    => '_tk_admin_header_style',

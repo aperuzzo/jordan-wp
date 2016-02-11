@@ -1,0 +1,29 @@
+
+
+@media screen and (min-width: 768px) {
+	div.site-branding p {
+		font-size: 14px;
+	}
+
+	.navbar-nav  > li > a {
+		color: #000;
+    	background: #fff;
+    	padding: 10px 22px;
+    	font-size: 20px;
+	}
+
+	.navbar.center .nav {
+	    width: inherit;
+	}
+
+	.main-content {
+		background: url('../images/body-background.png') no-repeat center top;
+	}
+
+}
+
+@media screen and (min-width: 990px) {
+	div.site-branding p {
+		font-size: 25px;
+	}
+}

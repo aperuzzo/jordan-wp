@@ -36,6 +36,7 @@ function _tk_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	*/
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 450, 150, array( 'center', 'center')  );
 
 	/**
 	 * Enable support for Post Formats
@@ -89,9 +90,6 @@ add_action( 'widgets_init', '_tk_widgets_init' );
  */
 function _tk_scripts() {
 
-	// Import the necessary TK Bootstrap WP CSS additions
-	wp_enqueue_style( '_tk-bootstrap-wp', get_template_directory_uri() . '/includes/css/bootstrap-wp.css' );
-
 	// load bootstrap css
 	wp_enqueue_style( '_tk-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.min.css' );
 
@@ -100,6 +98,9 @@ function _tk_scripts() {
 
 	// load _tk styles
 	wp_enqueue_style( '_tk-style', get_stylesheet_uri() );
+
+	//load gorilla custom style
+	wp_enqueue_style( 'gorilla-style', get_template_directory_uri() . '/css/style.css');
 
 	// load bootstrap js
 	wp_enqueue_script('_tk-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
@@ -119,6 +120,15 @@ function _tk_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', '_tk_scripts' );
+
+/**
+* load google fonts
+*/
+function load_fonts() {
+    wp_register_style('et-googleFonts', 'https://fonts.googleapis.com/css?family=Abril+Fatface|Ultra|Libre+Baskerville');
+    wp_enqueue_style( 'et-googleFonts');
+}
+add_action('wp_print_styles', 'load_fonts'); 
 
 /**
  * Implement the Custom Header feature.
@@ -154,6 +164,7 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 //
 //
 //
+
 
 //this function queues in live reload for development through grunt-contrib-watch
 

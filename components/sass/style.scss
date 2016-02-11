@@ -1,5 +1,10 @@
-@import "normalize";
+@import 'variables';
+@import 'global';
+@import 'header';
+@import 'post';
 
-h2 {
-	padding: 10px;
-}
+
+
+@import 'media-queries';
+
+

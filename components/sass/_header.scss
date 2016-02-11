@@ -1,0 +1,34 @@
+div.site-branding p {
+	text-align: center;
+	font-family: $font-bold-headline;
+	font-size: 10px;
+	margin-bottom: 0px;
+}
+
+.site-branding {
+	border-bottom: 2px solid #000;
+}
+
+/*
+nav style*/
+
+.navbar.center  {
+    text-align: center;
+
+}
+
+.navbar.center .nav {
+    display:inline-block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#menu-collapse, .nav>li>a {
+	font-family: $font-headline;
+	text-transform: uppercase;
+}
+
+#menu-collapse {
+	font-size: 20px;
+}

@@ -10,8 +10,8 @@
 
 .navbar {
   position: relative;
-  min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-  margin-bottom: $navbar-margin-bottom;
+  min-height: 25px; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  // margin-bottom: $navbar-margin-bottom;
   border: 1px solid transparent;
 
   // Prevent floats from breaking the navbar
@@ -192,10 +192,12 @@
 
 .navbar-toggle {
   position: relative;
-  float: right;
-  margin-right: $navbar-padding-horizontal;
-  padding: 9px 10px;
-  @include navbar-vertical-align(34px);
+  display: block;
+  margin: auto;
+  // float: right;
+  // margin-right: $navbar-padding-horizontal;
+  // padding: 9px 10px;
+  // @include navbar-vertical-align(34px);
   background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
@@ -236,6 +238,9 @@
     padding-top:    10px;
     padding-bottom: 10px;
     line-height: $line-height-computed;
+    text-align: center;
+    color: #fff;
+    background: #00acec;
   }
 
   @media (max-width: $grid-float-breakpoint-max) {

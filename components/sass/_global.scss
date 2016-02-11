@@ -1,0 +1,22 @@
+*{
+	font-family: $font-paragraph;
+}
+
+h1, h2, h3, h4, h1 a {
+	font-family: $font-headline;
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	color: $link-color;
+	text-decoration: none;
+}
+
+// images
+
+div#content > img {
+	min-width: 100%;
+}
