@@ -1,19 +1,67 @@
-.post-info h1,
-.post-info .entry-meta {
-	display: inline;
-    vertical-align: top;
-}
-
 .post-info {
-	margin: 10px 0;
+
+	margin-bottom: 10px;
 	border-bottom: 2px solid #000;
+
+	img {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	h1,
+	.entry-meta {
+		display: inline;
+	    vertical-align: bottom;
+	}
 }
 
-h1.page-title a{
+
+h1.page-title a, h1.page-title {
 	font-family: $font-bold-headline;
 }
 
 .entry-date {
 	font-family: $font-headline;
 	font-size: 18px;
+}
+
+.edit-link a {
+	font-family: $font-headline;
+	font-size: 20px;
+	border: 2px dotted #000;
+	padding: 3px;
+	display: block;
+	text-align: center;
+}
+
+.comments-link a {
+	font-family: $font-headline;
+}
+
+.pager {
+	> li > a {
+		background: #000;
+		border: 1px solid #fff;
+		padding: 5px;
+		border-radius: 5px;
+		font-family: $font-headline;
+		color: #fff;
+
+		&:hover {
+			color: #000;
+			background: #fff;
+			border: 1px solid #000;
+		}
+	}
+}
+
+.fa-plus-square-o, .fa-minus-square-o {
+	float: right;
+	margin-bottom: 10px;
+	cursor: pointer;
+	font-size: 20px;
+
+	&:hover {
+		color: $sticky-color;
+	}
 }

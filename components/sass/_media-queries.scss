@@ -1,4 +1,13 @@
+@media screen and (min-width: 550px) {
+	#about {
+		p {
+			width: 70%;
+			margin: auto;
+			padding-bottom: 20px;
+		}
+	}
 
+}
 
 @media screen and (min-width: 768px) {
 	div.site-branding p {
@@ -7,7 +16,7 @@
 
 	.navbar-nav  > li > a {
 		color: #000;
-    	background: #fff;
+    	background: transparent;
     	padding: 10px 22px;
     	font-size: 20px;
 	}
@@ -18,6 +27,11 @@
 
 	.main-content {
 		background: url('../images/body-background.png') no-repeat center top;
+	}
+
+	.mail-header h2,
+	.mail-header p   {
+		display: inline;
 	}
 
 }

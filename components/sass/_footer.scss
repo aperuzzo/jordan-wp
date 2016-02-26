@@ -1,0 +1,67 @@
+#about {
+	background: url('../images/cat01.jpg') no-repeat center;
+	background-size: cover;
+	background-position: 0 36%;
+
+
+	h2, p {
+		color: #fff;
+	}
+
+	h2 {
+		border-bottom: 2px solid #fff;
+		text-align: center;
+		text-transform: uppercase;
+	}
+.gradient {
+	background: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)); /*Fx 3.6-15*/
+	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /*Standard*/
+}
+
+}
+
+.mail-header {
+	text-align: center;
+	padding: 10px 0;
+
+	h2 {
+		font-family: $font-bold-headline;
+		text-transform: lowercase;
+	}
+}
+
+.black {
+	background: #000;
+	color: #fff;
+}
+
+.mail-list {
+	padding: 10px 0;
+
+	.form-control {
+		background: #000;
+	}
+} 
+
+.btn {
+		background: #000;
+		border: 1px solid #fff;
+		padding: 5px;
+		border-radius: 5px;
+		font-family: $font-headline;
+		color: #fff;
+
+		&:hover {
+			color: #000;
+			background: #fff;
+			border: 1px solid #000;
+		}
+	}
+
+	
+
+div#btn-fix {
+	overflow-x: hidden;
+}

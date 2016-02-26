@@ -1,12 +1,22 @@
-div.site-branding p {
-	text-align: center;
-	font-family: $font-bold-headline;
-	font-size: 10px;
-	margin-bottom: 0px;
+.site-header {
+	background: #fff;
+	transition: all 0.4s ease;
 }
 
 .site-branding {
 	border-bottom: 2px solid #000;
+
+	p {
+		text-align: center;
+		font-family: $font-bold-headline;
+		font-size: 10px;
+		margin-bottom: 0px;
+	}
+}
+
+.site-header-inner img {
+	display: block;
+	margin: auto;
 }
 
 /*
@@ -15,13 +25,27 @@ nav style*/
 .navbar.center  {
     text-align: center;
 
+    .nav {
+	    display:inline-block;
+	    float: none;
+	    width: 100%;
+	    height: 100%;
+
+	    // a {
+	    // 	background: transparent;
+	    // }
+	}
 }
 
-.navbar.center .nav {
-    display:inline-block;
-    float: none;
-    width: 100%;
-    margin-bottom: 10px;
+.navbar-nav {
+	> li > a  {
+		color: #000;
+	}
+}
+
+.navbar {
+	border: none;
+	margin-bottom: -5px;
 }
 
 #menu-collapse, .nav>li>a {
@@ -31,4 +55,11 @@ nav style*/
 
 #menu-collapse {
 	font-size: 20px;
+}
+
+.sticky {
+	position: fixed;
+	width: 100%;
+	z-index: 99999;
+	background: $sticky-color;
 }

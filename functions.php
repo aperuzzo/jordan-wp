@@ -82,6 +82,15 @@ function _tk_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'About Sidebar', '_tk' ),
+		'id'            => 'sidebar-about',
+		'before_widget' => '<article id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</article>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', '_tk_widgets_init' );
 
@@ -101,6 +110,9 @@ function _tk_scripts() {
 
 	//load gorilla custom style
 	wp_enqueue_style( 'gorilla-style', get_template_directory_uri() . '/css/style.css');
+
+	// load custom js
+	wp_enqueue_script('gorilla-custom-script', get_template_directory_uri().'/js/script.js', array('jquery') );
 
 	// load bootstrap js
 	wp_enqueue_script('_tk-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );

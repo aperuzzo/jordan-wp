@@ -26,7 +26,7 @@
 
 <header id="masthead" class="site-header" role="banner">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
+	<div id="header-logo" class="container">
 		<div class="row">
 			<div class="site-header-inner col-sm-12">
 
@@ -46,9 +46,7 @@
 			</div>
 		</div>
 	</div><!-- .container -->
-</header><!-- #masthead -->
-
-<nav class="site-navigation">
+	<nav class="site-navigation">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 	<div class="container">
 		<div class="row">
@@ -85,6 +83,9 @@
 		</div>
 	</div><!-- .container -->
 </nav><!-- .site-navigation -->
+</header><!-- #masthead -->
+
+
 
 <div class="main-content">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>

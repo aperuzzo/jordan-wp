@@ -6,8 +6,12 @@
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		<div class="post-info">
+	<header class="post-info">
+			<?php 
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail();
+				} 
+			?>
 			<h1 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 			<?php if ( 'post' == get_post_type() ) : ?>
@@ -15,7 +19,7 @@
 				<?php _tk_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
-		</div>
+		
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() || is_archive() ) : // Only display Excerpts for Search and Archive Pages ?>
@@ -23,7 +27,7 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
-	<div class="entry-content">
+	<div class="entry-content-home">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', '_tk' ) ); ?>
 		<?php
 			wp_link_pages( array(
@@ -57,10 +61,12 @@
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
+		<?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
+
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_tk' ), __( '1 Comment', '_tk' ), __( '% Comments', '_tk' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
+		
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
