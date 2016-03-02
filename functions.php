@@ -66,6 +66,26 @@ function _tk_setup() {
 		'primary'  => __( 'Header bottom menu', '_tk' ),
 	) );
 
+	register_post_type( 'comic', 
+		array(
+			'labels' => array(
+				'name' => __( 'Comics' ),
+				'singular_name' => __( 'Comic' ),
+				'add_new_item' => __( 'Add New Comic' )
+			),
+			'public' => true,
+			'menu_position' => 5,
+			'query_var' => true,
+			'supports' => array( 
+				'title', 
+				'editor', 
+				'excerpt', 
+				'thumbnail' ,
+			),
+			'capability_type' => 'post',
+		)
+	);
+
 }
 endif; // _tk_setup
 add_action( 'after_setup_theme', '_tk_setup' );
@@ -176,6 +196,29 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 //
 //
 //
+
+
+
+ /* Add Next Page Button in First Row */
+add_filter( 'mce_buttons', 'my_add_next_page_button', 1, 2 ); // 1st row
+ 
+/**
+ * Add Next Page/Page Break Button
+ * in WordPress Visual Editor
+ * 
+ * @link https://shellcreeper.com/?p=889
+ */
+function my_add_next_page_button( $buttons, $id ){
+ 
+    /* only add this for content editor */
+    if ( 'content' != $id )
+        return $buttons;
+ 
+    /* add next page after more tag button */
+    array_splice( $buttons, 13, 0, 'wp_page' );
+ 
+    return $buttons;
+}
 
 
 //this function queues in live reload for development through grunt-contrib-watch

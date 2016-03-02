@@ -1,7 +1,7 @@
 function stickyHeader(){
 var headerLogo = jQuery('#header-logo')
 	jQuery(window).scroll(function() {
-		if (jQuery(this).scrollTop() > 1){  
+		if (jQuery(this).scrollTop() > 70){  
 		    jQuery('.site-header').addClass("sticky");
 		    jQuery(headerLogo).detach();
 

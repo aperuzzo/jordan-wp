@@ -65,3 +65,55 @@ h1.page-title a, h1.page-title {
 		color: $sticky-color;
 	}
 }
+
+.entry-content-comic {
+
+	img {
+		width:100%;
+	}
+
+	> p > img {
+		margin-top: 0;
+	}
+
+}
+
+.comic-links {
+	clear: both;
+	
+	h4, a {
+		float: left;
+		margin-right: 10px;
+
+	}
+
+	a {
+		font-family: $font-headline;
+		color: $link-color;
+		font-size: 25px;
+
+		&:hover {
+			color: darken($link-color, 10%);
+		}
+	}
+}
+
+.page-links {
+	text-align: center;
+	margin-bottom: 15px;
+
+	a {
+		padding: 5px 10px;
+		margin: 0 10px;
+		border: 1px solid #000;
+		font-family: $font-headline;
+	}
+
+
+}
+
+.remove-share{
+	.sharedaddy{
+		display: none;
+	}
+}

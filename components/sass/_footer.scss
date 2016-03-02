@@ -65,3 +65,14 @@
 div#btn-fix {
 	overflow-x: hidden;
 }
+
+.privacyPolicy{
+	a {
+		color: #404040;
+		font-size: 10px;
+
+		&:hover {
+			color: $link-color;
+		}
+	}
+}
