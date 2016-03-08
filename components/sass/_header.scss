@@ -41,6 +41,10 @@ nav style*/
 	> li > a  {
 		color: #000;
 	}
+
+	> li.active > a {
+		color: $link-color;
+	}
 }
 
 .navbar {
