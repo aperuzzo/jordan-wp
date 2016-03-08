@@ -103,16 +103,20 @@ h1.page-title a, h1.page-title {
 	margin-bottom: 15px;
 
 	a {
-		padding: 5px 10px;
-		margin: 0 10px;
 		border: 1px solid #000;
-		font-family: $font-headline;
+		margin: 0 7px;
+		padding: 5px 10px;		
 	}
 
+	.page-link-number {
+		font-family: $font-headline;
+
+	}
 
 }
 
 .remove-share{
+	clear: both;
 	.sharedaddy{
 		display: none;
 	}

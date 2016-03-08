@@ -15,6 +15,8 @@
 			wp_link_pages( array(
 				'before' => '<div class="page-links">',
 				'after'  => '</div>',
+				'link_before' => '<span class="page-link-number">',
+				'link_after' => '</span>',
 			) );
 		?>
 		<div class="remove-share"><?php the_excerpt(); ?></div>
