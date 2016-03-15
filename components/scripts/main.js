@@ -29,5 +29,12 @@ jQuery( window ).load(function() {
             }
         });
     });
+
+    //hide bootstrap menu on click
+    jQuery(document).on('click','.navbar-collapse.in',function(e) {
+    if( jQuery(e.target).is('a') && jQuery(e.target).attr('class') != 'dropdown-toggle' ) {
+        jQuery(this).collapse('hide');
+    }
+});
 });
 
